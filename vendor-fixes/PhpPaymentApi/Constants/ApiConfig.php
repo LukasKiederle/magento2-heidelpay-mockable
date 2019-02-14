@@ -7,9 +7,8 @@
  * http://opensource.org/licenses/osl-3.0.php
  */
 
-namespace TechDivision\PayoneMockable\PhpPaymentApi\Constants;
+namespace Heidelpay\PhpPaymentApi\Constants;
 
-use Heidelpay\PhpPaymentApi\Constants\ApiConfig as CoreApiConfig;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
 /**
@@ -17,7 +16,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  * @link       http://www.techdivision.com/
  * @author     Lukas Kiederle <l.kiederle@techdivision.com
  */
-class ApiConfig extends CoreApiConfig
+class ApiConfig
 {
     const SDK_VERSION = 'v1.6.2';
 

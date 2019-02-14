@@ -7,9 +7,8 @@
  * http://opensource.org/licenses/osl-3.0.php
  */
 
-namespace TechDivision\PayoneMockable\PhpPaymentApi\Constants;
+namespace Heidelpay\PhpPaymentApi\Adapter;
 
-use Heidelpay\PhpPaymentApi\Adapter\CurlAdapter as CoreCurlAdapter;
 use Heidelpay\PhpPaymentApi\Response;
 use Heidelpay\PhpPaymentApi\Constants\ProcessingResult;
 
@@ -18,7 +17,7 @@ use Heidelpay\PhpPaymentApi\Constants\ProcessingResult;
  * @link       http://www.techdivision.com/
  * @author     Lukas Kiederle <l.kiederle@techdivision.com
  */
-class CurlAdapter extends CoreCurlAdapter
+class CurlAdapter
 {
     /**
      * send post request to payment server
