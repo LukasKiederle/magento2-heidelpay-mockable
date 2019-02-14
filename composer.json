@@ -1,0 +1,33 @@
+{
+    "name": "techdivision/heidelpay-mockable",
+    "description": "Extend heidelpay/magento2 module in order to allow provide mock service endpoint",
+    "type": "magento2-module",
+    "license": [
+      "OSL-3.0"
+    ],
+    "support": {
+          "email": "l.kiederle@techdivision.com"
+	},
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0|~7.1.0",
+        "magento/framework": "^100.0.0|^101.0.0",
+        "heidelpay/magento2": "^18.10"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com/"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php",
+            "vendor-fixes/PhpPaymentApi/Adapter/CurlAdapter.php",
+            "vendor-fixes/PhpPaymentApi/Constants/ApiConfig.php",
+            "vendor-fixes/PhpPaymentApi/PaymentMethods/BasicPaymentMethodTrait.php"
+        ],
+        "psr-4": {
+            "TechDivision\\PayoneMockable\\": ""
+        }
+    }
+}
