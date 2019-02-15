@@ -13,7 +13,7 @@ not supported by Heidelpay.
 
 ```
 composer config repositories.techdivision.magento2-heidelpay-mockable vcs https://github.com/LukasKiederle/magento2-heidelpay-mockable.git
-composer require techdivision/heidelpay-mockable
+composer require --dev techdivision/heidelpay-mockable
 ```
 
 ```
