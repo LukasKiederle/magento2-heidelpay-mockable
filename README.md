@@ -1,4 +1,4 @@
-# TechDivision/PayoneMockable
+# TechDivision/HeidelpayMockable
 
 This module provides some plugins in order to manipulate API endpoints within the `magento2/heidelpay` (https://github.com/heidelpay/magento2) 
 module. This is necessary for mocking purpose in a local development environment or for additional testing systems, which are
