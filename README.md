@@ -9,6 +9,17 @@ not supported by Heidelpay.
 
 ## Getting Started
 
+### Installation
+
+```
+composer config repositories.techdivision.magento2-heidelpay-mockable vcs https://github.com/LukasKiederle/magento2-heidelpay-mockable.git
+composer require techdivision/heidelpay-mockable
+```
+
+```
+bin/magento setup:upgrade
+```
+
 ### Configuration
 
 After installing the module you need to configure the endpoints for your PSP mock service by adding following values
@@ -21,7 +32,7 @@ into your `<project-root>/app/etc/config.php`.
     array (
       'techdivision_heidelpay_mockable' => 
       array (
-        'psp_mock_url' => 'psp-mock.test',
+        'psp_mock_url' => 'https://psp-mock.test',
       ),
     ),
   ),

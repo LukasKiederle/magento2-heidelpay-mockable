@@ -35,7 +35,7 @@ class ApiConfig
     {
         $config = include (__DIR__ . '/../../../../../../app/etc/config.php');
 
-        $sApiUrl = $config['system']['default']['techdivision_heidelpay_mockable']['psp_mock_url'];
+        $sApiUrl = $config['system']['default']['techdivision_heidelpay_mockable']['psp_mock_url'] . '/ngw/post';
 
         if($sApiUrl != null){
             return $sApiUrl;
