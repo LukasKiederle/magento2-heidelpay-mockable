@@ -9,7 +9,6 @@
 
 namespace Heidelpay\PhpPaymentApi\Constants;
 
-use Magento\Framework\App\Config\ScopeConfigInterface;
 
 /**
  * @copyright  Copyright (c) 2019 TechDivision GmbH
@@ -26,30 +25,17 @@ class ApiConfig
      * Techdivision Changes start here........
      */
 
-
-    /**
-     * @var ScopeConfigInterface
-     */
-    private $scopeConfig;
-
-
     private $testUrl = 'https://psp-mock.test/ngw/post';
 
-    /**
-     * @param ScopeConfigInterface $scopeConfig
-     */
-    public function __construct(
-        ScopeConfigInterface $scopeConfig
-    ) {
-        $this->scopeConfig = $scopeConfig;
-    }
 
     /**
      * @return string
      */
     public function getTestUrl()
     {
-        $sApiUrl = $this->scopeConfig->getValue('techdivision_payone_mockable/payone/post_gateway');
+        $config = include (__DIR__ . '/../../../../../../app/etc/config.php');
+
+        $sApiUrl = $config['system']['default']['techdivision_heidelpay_mockable']['psp_mock_url'];
 
         if($sApiUrl != null){
             return $sApiUrl;

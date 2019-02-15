@@ -54,7 +54,17 @@ class CurlAdapter
         }
 
         curl_setopt($request, CURLOPT_RETURNTRANSFER, 1);
+
+        /**
+         * Techdivision Changes start here........
+         */
+
         curl_setopt($request, CURLOPT_SSL_VERIFYPEER, 0);
+
+        /**
+         * Techdivision Changes stop here........
+         */
+
         curl_setopt($request, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($request, CURLOPT_SSLVERSION, 6);       // CURL_SSLVERSION_TLSv1_2
         curl_setopt($request, CURLOPT_USERAGENT, 'PhpPaymentApi');

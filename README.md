@@ -1,8 +1,8 @@
 # TechDivision/PayoneMockable
 
-This module provides some plugins in order to manipulate API endpoints within the `payone-gmbh/magento2` (https://github.com/PAYONE-GmbH/magento-2) 
+This module provides some plugins in order to manipulate API endpoints within the `magento2/heidelpay` (https://github.com/heidelpay/magento2) 
 module. This is necessary for mocking purpose in a local development environment or for additional testing systems, which are
-not supported by PAYONE. 
+not supported by Heidelpay. 
 
 > **ATTENTION:**
 > Please do not use this module in production environment. It is designed for testing purpose only!
@@ -12,19 +12,19 @@ not supported by PAYONE.
 ### Configuration
 
 After installing the module you need to configure the endpoints for your PSP mock service by adding following values
-into your `env.php`.
+into your `<project-root>/app/etc/config.php`.
 
 ```php
-    'system' => [
-        'default' => [
-            'techdivision_payone_mockable' => [
-                'payone' => [
-                    'client_api' => 'https://psp-mock.test/payone/client-api/',
-                    'post_gateway' => 'https://psp-mock.test/payone/post-gateway/',
-                ]
-            ]
-        ],
-    ],
+'system' => 
+  array (
+    'default' => 
+    array (
+      'techdivision_heidelpay_mockable' => 
+      array (
+        'psp_mock_url' => 'psp-mock.test',
+      ),
+    ),
+  ),
 ```
 
 ### Mock Service
