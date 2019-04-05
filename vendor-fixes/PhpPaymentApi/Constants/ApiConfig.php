@@ -25,22 +25,21 @@ class ApiConfig
      * Techdivision Changes start here........
      */
 
-    private $testUrl = 'https://psp-mock.test/ngw/post';
-
+    const TEST_URL = 'https://psp-mock.test/ngw/post';
 
     /**
      * @return string
      */
     public function getTestUrl()
     {
-        $config = include (__DIR__ . '/../../../../../../app/etc/config.php');
+        $config = include(__DIR__ . '/../../../../../../app/etc/config.php');
 
-        $sApiUrl = $config['system']['default']['techdivision_heidelpay_mockable']['psp_mock_url'] . '/ngw/post';
+        $customTestApiUrl = $config['system']['default']['techdivision_heidelpay_mockable']['psp_mock_url'] . '/ngw/post';
 
-        if($sApiUrl != null){
-            return $sApiUrl;
+        if ($customTestApiUrl !== null) {
+            return $customTestApiUrl;
         } else {
-            return $this->testUrl;
+            return $this::TEST_URL;
         }
     }
 
